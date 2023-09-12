@@ -10,6 +10,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    extend: {
+      maxWidth: {
+        "8xl": "1920px"
+      },
+    },
   },
   plugins: [],
 }
