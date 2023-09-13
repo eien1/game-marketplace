@@ -1,6 +1,6 @@
 
-
-
+import Image from "next/image"
+import Link from "next/link"
 
 export default function List({blockchaingames}) {
   return (
@@ -22,11 +22,10 @@ export default function List({blockchaingames}) {
                 className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
                 {game.type}
               </div>
-              <a
-                href="#"
+              <Link href={`/games/${game.slug}`}
                 className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
-                {game.title}
-              </a>
+                  {game.title}
+              </Link>
               <p
                 className="mt-2 text-gray-500">
                 {game.description}
