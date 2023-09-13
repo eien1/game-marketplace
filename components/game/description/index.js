@@ -7,7 +7,7 @@ const lectures = [
     "Safe operator",
   ]
 
-export default function Content() {
+export default function Description() {
     return (
         <section className="max-w-5xl mx-auto">
         <div className="flex flex-col">

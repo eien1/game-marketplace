@@ -1,21 +1,27 @@
 import { Hero, Breadcrumbs } from "@components/common"
 import { GameList } from "@components/game"
 import { BaseLayout } from "@components/layout"
-import { OrderCard } from "@components/order"
-import { EthRates, WalletBar } from "@components/web3"
+import { getAllGames } from "@content/blockchaingames/fetcher"
 
 
-export default function Home() {
-    return (
-     <>
-          <Hero />      
-          <Breadcrumbs />
-          <EthRates />
-          <WalletBar />
-          <OrderCard />
-          <GameList />  
+export default function Home({blockchaingames}) {
+  return (
+    <>
+      <Hero />
+      <GameList
+        blockchaingames={blockchaingames}
+      />
     </>
-    )
+  )
+}
+
+export function getStaticProps() {
+  const { data } = getAllGames()
+  return {
+    props: {
+      blockchaingames: data
+    }
   }
+}
 
 Home.Layout = BaseLayout

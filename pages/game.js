@@ -1,5 +1,5 @@
 import { Modal } from "@components/common";
-import { Content, GameHero, Keypoints } from "@components/game";
+import { Description, GameHero, Keypoints } from "@components/game";
 import { BaseLayout } from "@components/layout";
 
 
@@ -15,7 +15,7 @@ export default function Game() {
         <GameHero />
       </div>
         <Keypoints />
-        <Content />
+        <Description />
         <Modal />
       </>
     )
